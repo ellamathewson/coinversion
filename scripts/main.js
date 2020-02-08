@@ -10,6 +10,7 @@ let app = new Vue({
         //--------------USER INPUT--------------------
         //currency options
         selected: 'USD',
+        convertChoice: 'CAD',
         options: [{
                 value: 'USD',
                 text: 'US Dollar'
