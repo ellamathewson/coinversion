@@ -17,8 +17,17 @@ body {
   background: black;
 }
 
+.nav-link {
+  color: black;
+}
+
+.active {
+  color: white;
+}
+
 .navbar-brand {
   font-family: 'Open Sans', sans-serif;
+  color: black;
 }
 
 .developer {
