@@ -11,8 +11,13 @@
   <title>Coinversion</title>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add this to <head> -->
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+  <script src="https://unpkg.com/@babel/polyfill@latest/dist/polyfill.min.js"></script>
+  <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 
   <!-- Custom styles for this template -->
   <link href="css/the-big-picture.css" rel="stylesheet">
@@ -70,10 +75,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script src="scripts/components.js"></script>
   <script src="scripts/main.js"></script>
