@@ -6,6 +6,51 @@ let app = new Vue({
         startAmnt: " ",
         endCurr: "",
         endAmnt: "",
+         //--------------USER INPUT--------------------
+        //currency options
+        selected: 'USD',
+        options: [
+            {
+                value: 'USD',
+                text: 'US Dollar'
+            },
+            {
+                value: 'CAD',
+                text: 'Canadian Dollar'
+            },
+            {
+                value: 'AUD',
+                text: 'Australian Dollar'
+            },
+            {
+                value: 'EUR',
+                text: 'Euro'
+            },
+            {
+                value: 'CHF',
+                text: 'Swiss Franc'
+            },
+            {
+                value: 'JPY',
+                text: 'Yen'
+            },
+            {
+                value: 'GBP',
+                text: 'Pound'
+            },
+            {
+                value: 'CNY',
+                text: 'Chinese Renminbi'
+            },
+            {
+                value: 'INR',
+                text: 'Rupee'
+            },
+            {
+                value: 'MXN',
+                text: 'Mexican Peso'
+            }
+        ]
 
     },
     methods: {

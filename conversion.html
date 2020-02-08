@@ -58,6 +58,13 @@
       </div>
 
       <div class="convert">
+        <b-input-group>
+            <b-input-group-prepend>
+                <b-badge class="function" variant="primary">Currency Type:</b-badge>
+            </b-input-group-prepend>
+    
+            <b-form-select v-model="selected" :options="options" id="currency" size="sm" class="mt-3"></b-form-select>
+        </b-input-group>
         <input type="text" placeholder="Example" v-model="startCurr"></input>
         <button @click="convert">Convert</button>
       </div>
