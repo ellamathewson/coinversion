@@ -3,10 +3,16 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-the-big-picture/blob/master/LICENSE)
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Ledger&display=swap');
+
+
 body {
-  background: url('http://placehold.it/1920x1080') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  background: white;
+  font-family: 'Ledger', serif;
+
+}
+
+.navbar {
+  background: black;
 }
