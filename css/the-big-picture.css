@@ -20,3 +20,20 @@ body {
 .navbar-brand {
   font-family: 'Open Sans', sans-serif;
 }
+
+.developer {
+  margin-left: 2.5vw;
+}
+
+.links {
+  margin-left: 5vw;
+}
+
+.intext-link {
+  color: #75D036;
+}
+
+.intext-link:hover {
+  color: #4C934C;
+  text-decoration: none;
+}
