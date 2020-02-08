@@ -95,16 +95,16 @@
       function toggleDiv() {
         if(purchaseDiv.style.display == "none") {
             purchaseDiv.style.display = "block";
-            convertDiv.style.display = "none";
+            $("#purchaseButton").addClass("activeButton");
 
-            $("#convertButton").addClass("activeButton");
-            $("#purchaseButton").removeClass("activeButton");
+            convertDiv.style.display = "none";
+            $("#convertButton").removeClass("activeButton");
         } else {
             purchaseDiv.style.display = "none";
-            convertDiv.style.display = "block";
+            $("#purchaseButton").removeClass("activeButton");
 
-            $("#convertButton").removeClass("activeButton");
-            $("#purchaseButton").addClass("activeButton");
+            convertDiv.style.display = "block";
+            $("#convertButton").addClass("activeButton");
         }
       }
   </script>
