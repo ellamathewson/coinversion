@@ -5,7 +5,7 @@
  */
 
  @import url('https://fonts.googleapis.com/css?family=Ledger&display=swap');
-
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 body {
   background: white;
@@ -15,4 +15,8 @@ body {
 
 .navbar {
   background: black;
+}
+
+.navbar-brand {
+  font-family: 'Open Sans', sans-serif;
 }
