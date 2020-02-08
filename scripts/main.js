@@ -66,9 +66,11 @@ let app = new Vue({
                     return response.json();
                 })
                 .then(json => {
-                    
-                    this.conversionRate = this.getRate(this.startCurr, json);
-                    console.log(this.conversionRate);
+                    this.conversionRate = this.getRate(this.endCurr, json);
+                    console.log(`The starting currency is ${this.startCurr}`);
+                    console.log(`The ending currency is ${this.endCurr}`);
+                    console.log(`The conversion rate is ${this.conversionRate}`);
+
                 })
 
         },
@@ -76,37 +78,37 @@ let app = new Vue({
         getRate(newCurrency, data) {
             switch (newCurrency) {
                 case 'USD':
-                    return data.rate.USD;
+                    return data.rates.USD;
                     break;
                 case 'CAD':
-                    this.conversionRate = data.rate.CAD;
+                    return data.rates.CAD;
                     break;
                 case 'AUD':
-                    this.conversionRate = data.rate.AUD;
+                    return data.rate.AUD;
                     break;
                 case 'EUR':
-                    this.conversionRate = data.rate.EUR;
+                    return data.rates.EUR;
                     break;
                 case 'CHF':
-                    this.conversionRate = data.rate.CHF;
+                    return data.rates.CHF;
                     break;
                 case 'JPY':
-                    this.conversionRate = data.rate.JPY;
+                    return data.rates.JPY;
                     break;
                 case 'GBP':
-                    this.conversionRate = data.rate.GBP;
+                    return data.rates.GBP;
                     break;
                 case 'CNY':
-                    this.conversionRate = data.rate.CNY;
+                    return data.rates.CNY;
                     break;
                 case 'INR':
-                    this.conversionRate = data.rate.INR;
+                    return data.rates.INR;
                     break;
                 case 'MXN':
-                    this.conversionRate = data.rate.MXN;
+                    return data.rates.MXN;
                     break;
                 default:
-                    this.conversionRate = data.rate.USD;
+                    return data.rates.USD;
 
             }
 
