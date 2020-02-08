@@ -71,3 +71,19 @@ button, .linkButton {
 button:hover, .linkButton:hover {
   background-color: #75D036;
 }
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50vw;
+  padding: 1em;
+}
+
+#selectLabel {
+  margin: 0 1em 0 0;
+}
+
+#currency {
+  margin-bottom: 1em;
+}
