@@ -11,6 +11,8 @@
   <title>Coinversion</title>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!-- Add this to <head> -->
   <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
   <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
@@ -61,10 +63,14 @@
           <p>
               Select a currency, then yeet to another currency
           </p>
+          <div class="tab">
+                <button id="convertButton" onclick="toggleDiv()">Convert</button>
+                <button id="purchaseButton" onclick="toggleDiv()">Purchase</button>
+          </div>
         </div>
       </div>
 
-      <div class="convert">
+      <div id="convert">
         <b-input-group>
             <p id="selectLabel">Currency Type:</p>
             <b-form-select v-model="selected" :options="options" id="currency" size="sm" class="mt-3"></b-form-select>
@@ -72,11 +78,36 @@
         <input type="text" placeholder="Example" v-model="startCurr"></input>
         <button @click="convert">Convert</button>
       </div>
+
+      <div id="purchase">
+          <h1>dolla dolla bills yo</h1>
+      </div>
     </div>
   </section>
 
   <script src="scripts/components.js"></script>
   <script src="scripts/main.js"></script>
+
+  <script>
+      let convertDiv = document.getElementById("convert");
+      let purchaseDiv = document.getElementById("purchase");
+
+      function toggleDiv() {
+        if(purchaseDiv.style.display == "none") {
+            purchaseDiv.style.display = "block";
+            convertDiv.style.display = "none";
+
+            $("#convertButton").addClass("activeButton");
+            $("#purchaseButton").removeClass("activeButton");
+        } else {
+            purchaseDiv.style.display = "none";
+            convertDiv.style.display = "block";
+
+            $("#convertButton").removeClass("activeButton");
+            $("#purchaseButton").addClass("activeButton");
+        }
+      }
+  </script>
 
 </body>
 

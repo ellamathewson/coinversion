@@ -87,3 +87,11 @@ button:hover, .linkButton:hover {
 #currency {
   margin-bottom: 1em;
 }
+
+#convert, #purchase {
+  display: none;
+}
+
+.activeButton {
+  background-color: #75D036;
+}
