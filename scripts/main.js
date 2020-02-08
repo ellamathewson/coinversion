@@ -4,8 +4,8 @@ let app = new Vue({
         apiCall: "https://api.exchangerate-api.com/v4/latest/",
         startCurr: " ",
         startAmnt: " ",
-        endCurr: " ",
-        endAmnt: " ",
+        endCurr: "",
+        endAmnt: "",
 
     },
     methods:{
