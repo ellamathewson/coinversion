@@ -52,11 +52,22 @@ body {
   margin: 20px 20px 20px 20px;
 }
 
-button {
+.linkButton {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.linkButton:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+button, .linkButton {
   border: none;
   padding: 1em;
 }
 
-button:hover {
+button:hover, .linkButton:hover {
   background-color: #75D036;
 }
