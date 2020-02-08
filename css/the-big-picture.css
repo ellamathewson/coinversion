@@ -51,3 +51,12 @@ body {
   max-width:200px;
   margin: 20px 20px 20px 20px;
 }
+
+button {
+  border: none;
+  padding: 1em;
+}
+
+button:hover {
+  background-color: #75D036;
+}
