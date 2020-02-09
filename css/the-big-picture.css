@@ -112,3 +112,12 @@ b-form-input {
 .input-group {
   max-width: 400px;
 }
+
+#developerPic {
+  width: 45%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
