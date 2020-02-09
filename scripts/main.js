@@ -2,15 +2,15 @@ let app = new Vue({
     el: '#root',
     data: {
         apiCall: "https://cors-anywhere.herokuapp.com/https://api.exchangerate-api.com/v4/latest/",
-        startCurr: "", //The starting currency
+        //startCurr: "USD", //The starting currency
         startAmnt: "", //The starting amount
-        endCurr: "CAD", //The currency you want to convert to
+        //endCurr: "CAD", //The currency you want to convert to
         endAmnt: "", //The converted currency
         conversionRate: "", //The conversion rate
         //--------------USER INPUT--------------------
         //currency options
-        selected: 'USD',
-        convertChoice: 'CAD',
+        startChoice: 'USD', //selected starting currency
+        convertChoice: 'CAD',//selected ending currency
         options: [{
                 value: 'USD',
                 text: 'US Dollar'
@@ -56,7 +56,7 @@ let app = new Vue({
     },
     methods: {
         convert() {
-            this.apiCall += `${this.startCurr}`;
+            this.apiCall += `${this.startChoice}`;
             fetch(this.apiCall)
                 .then(response => {
                     if (!response.ok) {
@@ -67,10 +67,23 @@ let app = new Vue({
                     return response.json();
                 })
                 .then(json => {
-                    this.conversionRate = this.getRate(this.endCurr, json);
-                    console.log(`The starting currency is ${this.startCurr}`);
-                    console.log(`The ending currency is ${this.endCurr}`);
-                    console.log(`The conversion rate is ${this.conversionRate}`);
+                   
+                   /* this.conversionRate = this.getRate(this.convertChoice, json);
+                    console.log(`The starting currency is ${this.startChoice}`);
+                    console.log(`The ending currency is ${this.convertChoice}`);
+                    console.log(`The conversion rate is ${this.conversionRate}`);*/
+                    if(this.startAmnt == ''){
+                        console.log("empty");
+                    }
+                    else{
+                        this.startAmnt = (Math.round(this.startAmnt * 100) / 100).toFixed(2);
+                        this.conversionRate = this.getRate(this.convertChoice, json);
+                        this.endAmnt = (Math.round(this.startAmnt * this.conversionRate * 100) / 100).toFixed(2);
+                        console.log(this.endAmnt);
+
+                        this.startAmnt = ""; //resets starting amount
+
+                    }
 
                 })
 
@@ -85,7 +98,7 @@ let app = new Vue({
                     return data.rates.CAD;
                     break;
                 case 'AUD':
-                    return data.rate.AUD;
+                    return data.rates.AUD;
                     break;
                 case 'EUR':
                     return data.rates.EUR;
