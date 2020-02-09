@@ -79,6 +79,9 @@ let app = new Vue({
                         this.startAmnt = (Math.round(this.startAmnt * 100) / 100).toFixed(2);
                         this.conversionRate = this.getRate(this.convertChoice, json);
                         this.endAmnt = (Math.round(this.startAmnt * this.conversionRate * 100) / 100).toFixed(2);
+                        
+                        console.log(`The starting currency is ${this.startChoice}`);
+                        console.log(`The ending currency is ${this.convertChoice}`);
                         console.log(this.endAmnt);
 
                         this.startAmnt = ""; //resets starting amount

@@ -96,6 +96,9 @@
             </b-input-group>
           </b-col>
         </b-row>
+        <b-row id="results">
+          <conversion v-bind:rate="conversionRate" v-bind:amnt="endAmnt"></conversion>
+        </b-row>
       </div>
 
       <div id="purchase">
